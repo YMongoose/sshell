@@ -1,10 +1,19 @@
 # sshell
 
-Portable SSH, SFTP and local terminal client for Windows x64.
+Native SSH, SFTP and local terminal client for Windows x64.
 
 ## Download
 
-Download **sshell.exe** from [Releases](https://github.com/YMongoose/sshell/releases/latest) and run it. No installer is required. Windows 10 version 1809 or newer is required for the local terminal.
+- [Portable sshell.exe](https://github.com/YMongoose/sshell/releases/latest/download/sshell.exe): download and run a single executable.
+- [Windows installer](https://github.com/YMongoose/sshell/releases/latest/download/sshell-setup.exe): per-user installation, Start menu integration and an optional desktop shortcut. Administrator rights are not required.
+
+Windows 10 version 1809 or newer is required for the local terminal. Uninstalling preserves hosts, preferences, credentials and private keys.
+
+## Application lock
+
+Enable an optional 6–12 digit PIN in **Settings → Application security**. Once enabled, every launch requires the PIN before showing the workspace. Automatic locking defaults to five minutes of inactivity and minimizing; these options can be changed. Lock manually with **Ctrl+Shift+L**. Active sessions and unsaved documents stay open while locked.
+
+Only a salted Argon2id verifier is kept in the operating system credential store. This protects access through the app interface; it does not replace Windows account security or protect against administrators and malware. Configure protection separately on each device and remember the PIN: it cannot be recovered.
 
 ## Updates
 
